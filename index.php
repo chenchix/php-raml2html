@@ -8,6 +8,17 @@
   * @license http://www.gnu.org/licenses/gpl-2.0.html GPL v2
   */
 
+
+if (isset($_POST["name"])) {
+	apc_delete('RAMLsource');
+	$RAMLsource = $_POST["name"];
+	apc_store('RAMLsource' , $RAMLsource);
+
+} else {
+	$RAMLsource = apc_fetch('RAMLsource' );
+}
+
+
 require_once('inc/spyc.php');
 require_once('inc/ramlDataObject.php');
 require_once('inc/raml.php');

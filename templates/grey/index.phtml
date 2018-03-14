@@ -268,6 +268,15 @@
 			<p>version <?php echo $RAML->get('version'); ?> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <?php echo $RAML->get('baseUri'); ?></p>
 		</header>
 		
+		<div id="container">
+			<article><h2>
+				<form enctype="multipart/form-data" action="index.php" method="POST">
+				    Introduce path or url location for your RAML file: <br/><input name="name" type="text" size=100/>
+				  <input type="submit" value="Send" />
+				</form>
+			</h2>
+			</article>
+		</div>
 		
 		<div id="container">
 			
