@@ -8,6 +8,12 @@
   * @license http://www.gnu.org/licenses/gpl-2.0.html GPL v2
   */
 
+if (!empty($_FILES)){
+	apc_delete('RAMLsource');
+	$RAMLsource=$_FILES['name']['tmp_name'];
+        apc_store('RAMLsource' , $RAMLsource);
+
+}
 
 if (isset($_POST["name"])) {
 	apc_delete('RAMLsource');
