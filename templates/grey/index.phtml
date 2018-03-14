@@ -270,8 +270,13 @@
 		
 		<div id="container">
 			<article><h2>
+				Introduce your RAML file location
 				<form enctype="multipart/form-data" action="index.php" method="POST">
-				    Introduce path or url location for your RAML file: <br/><input name="name" type="text" size=100/>
+				    File: <br/><input name="name" type="file" size=100/>
+				  <input type="submit" value="Send" />
+				</form>
+				<form enctype="multipart/form-data" action="index.php" method="POST">
+				    URL: <input name="name" type="text" size=100/>
 				  <input type="submit" value="Send" />
 				</form>
 			</h2>
